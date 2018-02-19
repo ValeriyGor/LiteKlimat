@@ -1,6 +1,470 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
+@import 'font-face'
+@include fontFace('Panton', '../fonts/Panton-Regular')
+@include fontFace('PantonLight', '../fonts/Panton-Light')
+@include fontFace('PantonSemiBold', '../fonts/Panton-SemiBold')
+@include fontFace('PantonBold', '../fonts/Panton-Bold')
+@include fontFace('PantonExtraBold', '../fonts/Panton-ExtraBold')
+@include fontFace('PantonExtraBold', '../fonts/Panton-ExtraBold')
+@include fontFace('PantonBlack', '../fonts/Panton-Black')
+
 $light: 300
 $normal: 400
 $semibold: 600
 $bold: 700
+
+body
+	background-color: #f4f4f4
+	background-image: url("../img/all.png")
+	background-position: center top
+	background-repeat: no-repeat
+	background-size: 1920px
+
+.header
+	padding-top: 30px
+	background: #fff
+	&__cart
+		height: 60px
+		border-radius: 30px
+		border: 1px solid #e6e6e6
+		text-align: center
+		position: relative
+		p
+			line-height: 58px
+			font-size: 16px
+			span
+				font-size: 16px
+				font-weight: $bold
+		img
+			height: 19px
+			width: 19px
+			position: relative
+			top: 3px
+			margin-right: 12px
+	&__counter-order
+		height: 20px
+		width: 20px
+		border-radius: 50%
+		background: #eb3952
+		color: #fff
+		font-size: 12px
+		line-height: 20px
+		position: absolute
+		top: -1px
+		right: -1px
+
+
+	&__contacts
+		padding-top: 4px
+		.mail-cont
+			color: #256aa3
+			padding-left: 32px
+			&__icon
+				height: 23px
+				width: 23px
+				background: #00d6be
+				color: #fff
+				display: inline-block
+				border-radius: 50%
+				line-height: 23px
+				text-align: center
+				font-size: 12px
+				margin-right: 8px
+		.mobile-cont
+			padding-left: 28px
+			color: #000
+			&__icon
+				height: 23px
+				width: 23px
+				background: #009fff
+				color: #fff
+				display: inline-block
+				border-radius: 50%
+				line-height: 23px
+				text-align: center
+				font-size: 12px
+				margin-right: 8px
+		p
+			line-height: 28px
+			span
+				font-size: 14px 
+				font-weight: $semibold
+
+.head-menu
+	border-top: 1px solid #efefef
+	margin-top: 29px
+	box-shadow: 0px 7px 52px 0px rgba(0, 0, 0, 0.06)
+	ul 
+		display: flex
+		justify-content: space-between
+		li 
+			display: inline-block
+			border-top: 2px solid #fff
+			&:hover, &.active
+				border-top: 2px solid #000
+			a
+				font-size: 14px
+				font-weight: $bold
+				line-height: 58px
+				color: #000
+				&:hover
+					text-decoration: none
+	.search
+		justify-content: flex-end
+		align-items: center
+		display: flex
+		height: 60px
+		input 
+			width: 155px
+			padding-left: 30px
+			background: url("../img/search-icon.png") center left 5px no-repeat
+			background-size: 16px 16px
+.content
+	padding-top: 30px
+	>div
+		border-radius: 3px
+
+h2
+	font-family: 'PantonBold'
+	font-size: 31px
+	line-height: 38px
+p
+	font-family: "Open Sans"
+	font-size: 16px
+
+.slider
+	height: 300px
+	position: relative
+	margin-bottom: 20px
+	&__item
+		padding-left: 88px
+		height: 300px
+		padding-right: 350px
+		padding-top: 53px
+		h2
+			color: #fff
+			margin-bottom: 10px
+		p
+			color: #fff
+			line-height: 28px
+			margin-bottom: 20px
+		a
+			height: 40px
+			border-radius: 20px
+			border: 2px solid #e6e6e6
+			display: inline-block
+			color: #fff
+			line-height: 36px
+			text-align: center
+			font-family: "Open Sans"
+			font-size: 14px
+			padding: 0 23px
+
+	.slick-dots
+		position: absolute
+		width: 100%
+		text-align: center
+		bottom: 19px
+		li
+			display: inline-block
+			font-size: 0
+			height: 8px
+			width: 8px
+			background: rgba(255, 255, 255, 0.3)
+			border-radius: 50%
+			margin: 0 4px
+			&.slick-active
+				background: #fff
+
+.slick-arrow
+	position: absolute
+	top: 50%
+	z-index: 99
+	height: 74px
+	width: 36px
+	margin-top: -37px
+	background: rgba(255, 255, 255, 0.3)
+	transition: all 0.3s
+	font-size: 0
+	&:hover
+		background: rgba(255, 255, 255, 0.6)
+
+.slick-prev
+	left: 15px
+	border-bottom-right-radius: 37px
+	border-top-right-radius: 37px
+	&:after
+		content: ""
+		display: block
+		height: 0
+		width: 0
+		position: absolute
+		top: 33px
+		right: 18px
+		border: 5px solid transparent
+		border-right-color: #fff
+		border-right-width: 7px
+
+.slick-next
+	right: 15px
+	border-bottom-left-radius: 37px
+	border-top-left-radius: 37px
+	&:after
+		content: ""
+		display: block
+		height: 0
+		width: 0
+		position: absolute
+		top: 33px
+		left: 18px
+		border: 5px solid transparent
+		border-left-color: #fff
+		border-left-width: 7px
+
+.akcia
+	height: 300px
+	padding: 25px 29px
+	background: url("../img/slide2.png") center no-repeat
+	background-size: cover
+	margin-bottom: 20px
+	h2
+		font-size: 36px
+		color: #fff
+		margin-bottom: 7px
+	p
+		color: #fff
+		&.akcia-discount
+			margin-top: 50px
+			line-height: 18px
+			font-weight: $semibold
+			span
+				font-size: 72px
+				line-height: 72px
+				display: block
+				font-family: 'PantonLight'
+				font-weight: normal
+				&:after
+					content: ""
+					width: 36px
+					height: 50px
+					display: inline-block
+					background: url("../img/arrow-right.png") center no-repeat
+					background-size: contain
+					margin-left: 15px
+
+.full-height-block a
+	height: 300px
+	background-size: cover
+	display: flex
+	align-items: flex-end
+	padding-bottom: 26px
+	&:hover
+		text-decoration: none
+	&:hover h3
+		color: #ccc
+	h3
+		color: #fff
+		font-size: 22px
+		padding-left: 28px
+
+.half-height-block
+	a
+		height: 141px
+		background-size: cover
+		display: flex
+		padding: 0
+		align-items: flex-end
+		padding-bottom: 26px
+		margin-bottom: 18px
+		border-radius: 3px
+		&:hover
+			text-decoration: none
+		&:hover h3
+			color: #ccc
+		h3
+			color: #fff
+			font-size: 22px
+			padding-left: 28px
+
+.full-link-block
+	>div
+		height: 303px
+		padding: 28px
+		background: #fff
+		border-radius: 3px
+		margin-bottom: 30px
+		box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.03)
+		&.zapchast
+			background: #fff url("../img/zapchast.png") bottom 10px right no-repeat
+	h3
+		margin-bottom: 6px
+	a
+		display: block
+		font-size: 16px
+		color: #256aa3
+		line-height: 32px
+
+.half-link-block
+	>div
+		height: 142px
+		background: #fff
+		padding: 28px
+		border-radius: 3px
+		margin-bottom: 19px
+		box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.03)
+
+		&:first-child
+			a
+				width: 46%
+				display: inline-block
+		h3
+			margin-bottom: 6px
+			font-size: 22px
+			img
+				vertical-align: middle
+				margin-left: 5px
+		a
+			display: block
+			font-size: 16px
+			color: #256aa3
+			line-height: 32px
+.your-questions
+	text-align: center
+	height: 200px
+	padding-top: 32px
+	background: url("../img/backcallback.png") center no-repeat
+	background-size: cover
+	border-radius: 3px
+	margin-bottom: 20px
+	h2
+		font-size: 36px
+		color: #fff
+		font-family: 'PantonBold'
+		letter-spacing: 1px
+		margin-bottom: 11px
+	p
+		color: #fff
+		letter-spacing: 0.3px
+		margin-bottom: 20px
+	.leave-order
+		display: inline-block
+		height: 45px
+		font: 16px/45px 'Open Sans', sans-serif
+		padding: 0 35px
+		color: #000
+		font-weight: 600
+		background: #fff
+		border-radius: 28px
+		transition: all 0.3s
+		&:hover
+			text-decoration: none
+			background: #ccc
+
+.benefits
+	padding: 38px 15px 47px
+	background: #fff
+	border-radius: 3px
+	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.03)
+	margin-bottom: 20px
+
+	h3
+		text-align: center
+		font-size: 31px
+		color: #000
+		font-family: 'PantonBold'
+		margin-bottom: 40px
+	img
+		display: block
+		margin: 0 auto 18px
+		height: 50px
+	span
+		font: $semibold 18px/28px 'Open Sans' sans-serif
+		display: block
+		width: 100%
+		text-align: center
+		margin-bottom: 4px
+	p
+		padding: 0 8px
+		font-size: 13px
+		text-align: center
+		line-height: 20px
+
+.guarantee
+	width: 100%
+	height: 375px
+	padding-left: 94px
+	padding-bottom: 47px
+	display: flex
+	flex-direction: column
+	justify-content: flex-end
+	background: url("../img/backconder.png") center no-repeat
+	background-size: cover
+	margin-bottom: 20px
+	h2
+		color: #fff
+		font-size: 34px
+		line-height: 42px
+		letter-spacing: 0.7px
+		max-width: 550px
+		margin-bottom: 43px
+	p
+		color: #fff
+		font-size: 13px
+		letter-spacing: 0.3px
+
+.carousel-container
+	margin-bottom: 20px
+	.carousel-wrap
+		background: #fff
+		padding-top: 28px
+		padding-bottom: 66px
+		border-radius: 3px
+	.carousel
+		padding: 0 100px
+		background: #fff
+		img
+			max-width: 90%
+		.slick-arrow
+			background: rgba(0, 0, 0, 0.1)
+		.slick-prev
+			left: 0
+		.slick-next
+			right: 0
+	h3
+		font-size: 32px
+		color: #000
+		line-height: 60px
+		font-family: "PantonBold"
+		text-align: center
+		margin-bottom: 20px
+
+.ventilation
+	padding: 25px 50px 43px
+	border-radius: 3px
+	background: #fff
+	margin-bottom: 20px
+	overflow: hidden
+	h3
+		font-size: 32px
+		color: #000
+		line-height: 60px
+		font-family: "PantonBold"
+		text-align: center
+		margin-bottom: 11px
+	img
+		float: right
+		margin-left: 30px
+	p 
+		font-size: 14px 
+		line-height: 27px
+
+.carousel-partners
+	height: 170px
+	display: flex
+	align-items: center
+	div
+		display: flex
+		img
+			display: block
+			margin: auto

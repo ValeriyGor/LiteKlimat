@@ -9,18 +9,275 @@
 
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
 </head>
 <body>
-	<header>
-		
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="img/logo.png" alt="" class="header__logo">
+				</div>
+				<div class="col-sm-5 header__contacts">
+					<div class="col-sm-6 mail-cont">
+						<p><span class="mail-cont__icon"><i class="fas fa-envelope"></i></span><span class="mail-cont__text">zakaz@LKekb.ru</span></p>
+						<p><span class="mail-cont__icon"><i class="fas fa-check"></i></span><span class="mail-cont__text">Оставить заявку</span></p>
+					</div>
+					<div class="col-sm-6 mobile-cont">
+						<p><span class="mobile-cont__icon"><i class="fas fa-phone" data-fa-transform="rotate-90"></i></span><span class="mobile-cont__text">8 343 385 84 00</span></p>
+						<p><span class="mobile-cont__icon"><i class="fas fa-phone" data-fa-transform="rotate-90"></i></span><span class="mobile-cont__text">8 919 386 82 32</span></p>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="header__cart">
+						<p><img src="img/cart-img.png" alt="">Корзина: <span>15 320 руб</span></p>
+						<span class="header__counter-order">2</span>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<nav class="head-menu">
+			<div class="container">
+				<div class="row">
+					<ul class="col-sm-9">
+						<li class="active"><a href="#">Главная</a></li>
+						<li><a href="#">Продукция</a></li>
+						<li><a href="#">Расходные материалы</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Запасные части </a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<div class="search col-sm-3">
+						<input type="text" placeholder="Поиск по каталогу">
+					</div>
+				</div>
+			</div>			
+		</nav>	
 	</header>
-	<section></section>
-	<section></section>
-	<section></section>
-	<section></section>
+	<section class="container content">
+		<div class="row">
+			<div class="col-sm-8 slider">
+				<div class="slider__item" style="background-image: url(/img/slide1.png)">
+					<h2>Новинки 2018 года уже в продаже!</h2>
+					<p>Уникальные водонагреватели и тепловые пушки</p>
+					<a href="#">Подробнее</a>
+				</div>
+				<div class="slider__item" style="background-image: url(/img/slide1.png)">
+					<h2>Новинки 2018 года уже в продаже!</h2>
+					<p>Уникальные водонагреватели и тепловые пушки</p>
+					<a href="#">Подробнее</a>
+				</div>
+				<div class="slider__item" style="background-image: url(/img/slide1.png)">
+					<h2>Новинки 2018 года уже в продаже!</h2>
+					<p>Уникальные водонагреватели и тепловые пушки</p>
+					<a href="#">Подробнее</a>
+				</div>
+				<div class="slider__item" style="background-image: url(/img/slide1.png)">
+					<h2>Новинки 2018 года уже в продаже!</h2>
+					<p>Уникальные водонагреватели и тепловые пушки</p>
+					<a href="#">Подробнее</a>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="akcia">
+					<h2>Сезонное предложение!</h2>
+					<p>С 22 декабря до 7 января</p>
+					<p class="akcia-discount">
+						<span>-50%</span>
+						 на все кондиционеры
+					</p>
+				</div>
+			</div>
+			<div class="col-sm-4 full-height-block">
+				<a href="#" style="background-image: url('img/conder.png');">
+					<h3>Кондиционеры</h3>
+				</a>
+			</div>
+			<div class="col-sm-4 full-height-block">
+				<a href="#" style="background-image: url('img/konvektor.png');">
+					<h3>Увлажнение и обогрев</h3>
+				</a>
+				
+			</div>
+			<div class="col-sm-4 half-height-block">
+				<a href="#" class="col-sm-12" style="background-image: url('img/nagrevatel.png');">
+					<h3>Водонагреватели</h3>
+				</a>
+				<a href="#" class="col-sm-12" style="background-image: url('img/ventilieren.png');">
+					<h3>Вентиляция</h3>
+				</a>
+			</div>
+			<div class="col-sm-4 full-link-block">
+				<div>
+					<h3>Услуги</h3>
+					<a href="#">Алмазное бурение</a>
+					<a href="#">Монтаж кондиционеров</a>
+					<a href="#">Ремонт кондиционеров</a>
+					<a href="#">Ремонт чиллеров, фанкойлов</a>
+					<a href="#">Ремонт систем вентиляции</a>
+					<a href="#">Техническое обслуживание</a>
+				</div>
+			</div>
+			<div class="col-sm-4 half-link-block">
+				<div class="col-sm-12">
+					<h3>Тепловое оборудование <img src="img/warm.png" alt=""></h3>
+					<a href="#">Дизельное</a>
+					<a href="#">Электрическое</a>
+					<a href="#">Газовое</a>
+					<a href="#">Водяное</a>
+				</div>
+				<div class="col-sm-12">
+					<h3>Расходные материалы  <img src="img/refresh.png" alt=""></h3>
+					<a href="#">Для кондиционеров</a>
+					<a href="#">Для вентиляции</a>
+				</div>
+			</div>
+			<div class="col-sm-4 full-link-block">
+				<div class="zapchast">
+					<h3>Запасные части</h3>
+					<a href="#">Для кондиционеров</a>
+					<a href="#">Для вентиляции</a>
+					<a href="#">Для тепловых завес</a>
+					<a href="#">Для водонагревателей</a>
+					<a href="#">Для тепловых пушек</a>
+					<a href="#">Для увлажнителей</a>
+					<a href="#">Для обогревателей</a>
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<div class="your-questions">
+					<h2>Мы ответим на все ваши вопросы</h2>
+					<p>Звоните нам по телефону 8 343 385 84 00 или опишите свой вопрос в заявке</p>
+					<a href="" class="leave-order">Оставить заявку</a>
+				</div>
+				
+			</div>
+			<div class="col-sm-12 ">
+				<div class="benefits">
+					<h3>Преимущества работы с нами</h3>
+					<div class="row">
+						<div class="col-sm-3">
+							<img src="img/time-ico.png" alt="">
+							<span>Оперативность</span>
+							<p>Наша компания обрабатывает заявки в кратчайшие сроки и предлагает наиболее выгодные условия сотрудничества.</p>
+						</div>
+						<div class="col-sm-3">
+							<img src="img/medal-ico.png" alt="">
+							<span>Квалификация</span>
+							<p>У нас только сертифицированное оборудование, а монтажники имеют квалификацию и разрешение для выполнения ремонтных работ.</p>
+						</div>
+						<div class="col-sm-3">
+							<img src="img/box.png" alt="">
+							<span>География</span>
+							<p>Мы работаем с клиентами по всей территории УрФО и готовы осуществить ремонт кондиционера любой сложности.</p>
+						</div>
+						<div class="col-sm-3">
+							<img src="img/quality.png" alt="">
+							<span>Качество</span>
+							<p>Наша компания осуществляет продажу только качественной продукции. Все товары проходят техническую проверку.</p>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-12">
+				<div class="guarantee">
+					<h2>Получите год к гарантии от сервисного центра при покупке любого оборудования</h2>
+					<p>Подробности у менеджера</p>
+				</div>				
+			</div>
+			<div class="col-sm-12 carousel-container">
+				<div class="carousel-wrap">
+					<h3>Наши сертификаты</h3>
+					<div class="carousel">
+						<div><img src="img/sertificat1.png" alt=""></div>
+						<div><img src="img/sertificat2.png" alt=""></div>
+						<div><img src="img/sertificat3.png" alt=""></div>
+						<div><img src="img/sertificat4.png" alt=""></div>
+						<div><img src="img/sertificat5.png" alt=""></div>
+						<div><img src="img/sertificat6.png" alt=""></div>
+						<div><img src="img/sertificat4.png" alt=""></div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="col-sm-12">
+				<div class="ventilation">
+					<h3>Системы вентиляции</h3>
+					<img src="img/troubs.png" alt="">
+					<p>Системы вентиляции нередко выполняют и функцию систем кондиционирования и отопления . Современное оборудование для систем вентиляции и кондиционирования обязательно должно соответствовать строгим техническим и эксплуатационным требованиям. Системы вентиляции и к ондиционирования крупных промышленных объектов, жилых комплексов являются сложной инженерной системой. Это говорит о том, что необходимо в своевременно производить сервисное обслуживани е, как вентиляции , так и кондиционеров.</p>
+				</div>
+				
+			</div>
+			<div class="col-sm-12">
+				<div class="carousel-partners">
+					<div><img src="img/panasonic.png" alt=""></div>
+					<div><img src="img/electrolux.png" alt=""></div>
+					<div><img src="img/logo-mitsubishi.png" alt=""></div>
+					<div><img src="img/zanussi.png" alt=""></div>
+					<div><img src="img/panasonic.png" alt=""></div>
+					<div><img src="img/electrolux.png" alt=""></div>
+					<div><img src="img/logo-mitsubishi.png" alt=""></div>
+					<div><img src="img/zanussi.png" alt=""></div>
+				</div>				
+			</div>
+		</div>
+	</section>
 	<footer>
-		
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3">
+					<h4>Навигация</h4>
+					<a href="">Главная</a>
+					<a href="">Продукция</a>
+					<a href="">Расходные материалы</a>
+					<a href="">Услуги</a>
+					<a href="">Запасные части</a>
+					<a href="">Контакты</a>
+				</div>
+				<div class="col-sm-3">
+					<h4>Услуги</h4>
+					<a href="#">Алмазное бурение</a>
+					<a href="#">Монтаж кондиционеров</a>
+					<a href="#">Ремонт кондиционеров</a>
+					<a href="#">Ремонт чиллеров, фанкойлов</a>
+					<a href="#">Ремонт систем винтеляции</a>
+					<a href="#">Техническое обслуживание</a>
+				</div>
+				<div class="col-sm-3">
+					<h4>Запасные части</h4>
+					<a href="#">Для кондиционеров</a>
+					<a href="#">Для вентиляции</a>
+					<a href="#">Для тепловых завес</a>
+					<a href="#">Для водонагревателей</a>
+					<a href="#">Для тепловых пушек</a>
+					<a href="#">Для увлажнителей</a>
+				</div>
+				<div class="col-sm-3">
+					<h4>Контакты</h4>
+					<div><span>Телефон:</span><p>8 343 385 84 00 <br>8 919 386 82 32</p></div>
+					<div><span>Почта:</span><p><a href="mailto:zakaz@lkekb.ru">zakaz@lkekb.ru</a><a href="mailto:service@lkekb.ru">service@lkekb.ru</a></div>
+					<div><span>График:</span><p>8 343 385 84 00 <br>8 919 386 82 32</p></div>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<img src="img/footer-logo.png" alt="">
+					</div>
+					<div class="col-sm-6">
+						<p>2010 - 2017 г. ООО «Лайт Климат» г. Екатеринбург</p>
+					</div>
+					<div class="col-sm-3">
+						<img src="img/footer-bidus-logo.png" alt="">						
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 	<!-- Latest compiled and minified JavaScript -->
 	<script
@@ -29,6 +286,26 @@
 	crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script type="" src="js/script.js"></script>
+	<script>
+		$('.slider').slick({
+			dots: true
+		});
+
+		$('.carousel').slick({
+			lazyLoad: 'ondemand',
+			infinite: true,
+			slidesToShow: 6,
+			slidesToScroll: 1
+		});
+
+		$('.carousel-partners').slick({
+			lazyLoad: 'ondemand',
+			infinite: true,
+			slidesToShow: 4,
+			slidesToScroll: 1
+		});
+	</script>
 </body>
 </html>
