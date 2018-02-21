@@ -16,10 +16,14 @@ $bold: 700
 
 body
 	background-color: #f4f4f4
-	//background-image: url("../img/mob.png")
+	//background-image: url("../img/all.png")
 	background-position: center top
 	background-repeat: no-repeat
-	background-size: 375px
+	background-size: 1920px
+
+a:hover, a:focus
+	text-decoration: none
+
 .header
 	padding-top: 30px
 	background: #fff
@@ -47,6 +51,9 @@ body
 			position: relative
 			top: 3px
 			margin-right: 12px
+	&__logo
+		margin-top: 4px 
+		max-width: 336px
 	&__counter-order
 		height: 20px
 		width: 20px
@@ -91,11 +98,11 @@ body
 				font-size: 12px
 				margin-right: 8px
 		p
-			line-height: 28px
+			line-height: 26px
 			span, a
 				color: #256aa3
 				font-size: 14px 
-				font-weight: $semibold
+				font-weight: $normal
 			a:hover
 				color: #153e5f
 				text-decoration: none
@@ -103,8 +110,10 @@ body
 
 .head-menu
 	border-top: 1px solid #efefef
-	margin-top: 29px
-	box-shadow: 0px 7px 52px 0px rgba(0, 0, 0, 0.06)
+	margin-top: 24px
+	box-shadow: 0px 7px 40px -14px rgba(0, 0, 0, 0.06)
+	.row
+		position: relative
 	ul 
 		display: flex
 		justify-content: space-between
@@ -116,7 +125,7 @@ body
 				border-top: 2px solid #000
 			&.parent-elem
 				&:hover:after
-					transform: scale(1, -1)
+					border-top-color: #05a1ff
 				&:after
 					border: 4px solid transparent
 					content: ""
@@ -125,15 +134,32 @@ body
 					width: 0
 					position: relative
 					top: -2px
-					border-color: #b2b2b2 rgba(255,212,52,0) rgba(255,212,52,0)
+					border-color: #e5e5e5 rgba(255,212,52,0) rgba(255,212,52,0)
 					border-top-width: 6px
 					border-bottom-width: 0
 					margin-left: 2px
 					margin-right: 4px
 					transition: all .3s
+			&.second-parent-elem
+				&:hover:after
+					border-left-color: #05a1ff
+				&:after
+					border: 4px solid transparent
+					content: ""
+					display: block
+					height: 0
+					width: 0
+					position: absolute
+					top: 16px
+					right: 18px
+					border-color:  rgba(255,212,52,0) rgba(255,212,52,0) rgba(255,212,52,0) #e5e5e5
+					border-left-width: 6px
+					border-right-width: 0
+					transition: all .3s
+
 			a
 				font-size: 14px
-				font-weight: $bold
+				font-weight: $semibold
 				line-height: 58px
 				color: #000
 				display: inline-block
@@ -142,38 +168,118 @@ body
 			.second-level
 				display: none
 				position: absolute
-				min-width: 160px
+				min-width: 240px
 				background: #fff
+				border: 1px solid #e6e6e6
 				z-index: 299
-				left: -30px
+				left: -64px
 				top: 58px
 				padding-bottom: 10px
+				padding-top: 5px
 				li
 					width: 100%
 					border: none
 					a
-						padding-left: 30px
 						width: 100%
 						display: block
-						font-weight: $semibold
+						font-weight: $normal
 						font-size: 14px
-						line-height: 26px
-						padding: 5px 30px
+						line-height: 30px
+						padding: 5px 24px
 						white-space: nowrap
 					&:hover
 						border: none
-						background: #ccc
+						background: #f7f7f7
+			.third-level
+				display: none
+				position: absolute
+				min-width: 240px
+				background: #fff
+				z-index: 299
+				left: calc(100% + 1px)
+				top: 0px
+				padding-bottom: 10px
+				border-top-right-radius: 3px
+				border-bottom-right-radius: 3px
+				box-shadow: inset 7px 0 20px -7px rgba(0,0,0,0.4)
+				border-bottom: 1px solid #e6e6e6
+				li
+					width: 100%
+					border: none
+					a
+						width: 100%
+						display: block
+						font-weight: $normal
+						font-size: 14px
+						line-height: 30px
+						padding: 5px 24px
+						white-space: nowrap
+					&:hover
+						border: none
+						background: #f7f7f7				
+						box-shadow: inset 7px 0 20px -7px rgba(0,0,0,0.4)
+
 
 	.search
 		justify-content: flex-end
 		align-items: center
 		display: flex
 		height: 60px
+		position: absolute
+		top: 0
+		right: 0
+		transition: all 0.3s
+		.close-input
+			position: absolute
+			display: none
+			top: 22px
+			right: 15px
+			width: 16px
+			height: 16px
+			cursor: pointer
 		input 
 			width: 155px
 			padding-left: 30px
-			background: url("../img/search-icon.png") center left 5px no-repeat
+			background: #fff url("../img/svg/ic_search_link.svg") center left 5px no-repeat
 			background-size: 16px 16px
+			transition: all 0.3s
+			&::-webkit-input-placeholder 
+				color:#999
+			&::-moz-placeholder          
+				color:#999
+			&:-moz-placeholder           
+				color:#999
+			&:-ms-input-placeholder      
+				color:#999
+			&:hover	
+				background: #fff url("../img/svg/ic_search_active.svg") center left 5px no-repeat
+				&::-webkit-input-placeholder 
+					color:#000
+				&::-moz-placeholder          
+					color:#000
+				&:-moz-placeholder           
+					color:#000
+				&:-ms-input-placeholder      
+					color:#000
+		&.opened
+			width: 100%
+			z-index: 300
+			.close-input
+				display: block
+			input
+				width: 100%
+				&:hover	
+					background: #fff url("../img/svg/ic_search_link.svg") center left 5px no-repeat
+					&::-webkit-input-placeholder 
+						color:#999
+					&::-moz-placeholder          
+						color:#999
+					&:-moz-placeholder           
+						color:#999
+					&:-ms-input-placeholder      
+						color:#999
+
+
 .content
 	padding-top: 30px
 	>div
@@ -214,6 +320,9 @@ p
 			font-family: "Open Sans"
 			font-size: 14px
 			padding: 0 23px
+			transition: all 0.3s
+			&:hover
+				background: rgba(0, 0, 0, 0.3)
 
 	.slick-dots
 		position: absolute
@@ -314,10 +423,11 @@ p
 	display: flex
 	align-items: flex-end
 	padding-bottom: 26px
+	border-radius: 3px
+	transition: all 0.3s
 	&:hover
 		text-decoration: none
-	&:hover h3
-		color: #ccc
+		box-shadow: 0 0 500px rgba(0, 0, 0, .2) inset
 	h3
 		color: #fff
 		font-size: 22px
@@ -332,11 +442,11 @@ p
 		align-items: flex-end
 		padding-bottom: 26px
 		margin-bottom: 18px
+		transition: all 0.3s
 		border-radius: 3px
 		&:hover
 			text-decoration: none
-		&:hover h3
-			color: #ccc
+			box-shadow: 0 0 500px rgba(0, 0, 0, .2) inset
 		h3
 			color: #fff
 			font-size: 22px
@@ -402,6 +512,8 @@ p
 		color: #fff
 		letter-spacing: 0.3px
 		margin-bottom: 20px
+		span
+			font-weight: $semibold
 	.leave-order
 		display: inline-block
 		height: 45px
@@ -424,7 +536,9 @@ p
 	margin-bottom: 20px
 	.col-sm-3
 		div
-			min-height: 50px
+			min-height: 68px
+			display: flex
+			padding-bottom: 18px
 			text-align: center
 	h3
 		text-align: center
@@ -433,9 +547,9 @@ p
 		font-family: 'PantonBold'
 		margin-bottom: 40px
 	img
-		display: inline-block
-		margin: 0 auto 18px
-		line-height: 50px
+		display: block
+		margin: auto
+		line-height: 68px
 		vertical-align: middle
 	span
 		font: $semibold 18px/28px 'Open Sans' sans-serif
@@ -524,10 +638,9 @@ p
 
 .carousel-partners
 	height: 170px
-	display: flex
 	align-items: center
 	background-color: #fff
-	padding: 0 40px
+	padding: 50px 40px
 	margin-bottom: 69px 
 	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.03)
 	div
@@ -590,6 +703,117 @@ footer
 		display: block
 		margin: 0 0 0 auto
 		width: 162px
+
+#modal_form
+	width: 450px
+	height: 730px
+	// Рaзмеры дoлжны быть фиксирoвaны
+	border-radius: 3px
+	background: #fff
+	position: fixed
+	top: 45%
+	left: 50%
+	margin-top: -365px
+	margin-left: -225px
+	// тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =)
+	display: none
+	opacity: 0
+	z-index: 899
+	padding: 38px 10px
+	h2
+		text-align: center
+		color: #000
+		font-size: 32px
+		margin-bottom: 11px
+	p
+		color: #000
+		font-size: 14px
+		text-align: center
+		max-width: 330px
+		line-height: 22px
+		margin: 0 auto 32px
+		&.personal-data
+			font-size: 12px
+			color: #999
+			a
+				display: block
+				text-decoration: underline
+				font-size: 12px
+				line-height: 20px
+				color: #999
+				&:hover
+					text-decoration: none
+	form
+		text-align: center
+	input, button, .label-files
+		background: #fcfcfc
+		border-radius: 23px
+		height: 50px
+		width: 320px
+		border: 1px solid #e6e6e6
+		margin: 0 auto 20px
+		padding: 0 30px
+		transition: all 0.3s
+	.label-files
+		font: 400 14px/48px 'Open Sans', sans-serif
+		cursor: pointer
+		&:hover
+			background: #e6e6e6
+	
+	button
+		background: #00d6be
+		color: #fff
+		font-size: 16px
+		font-weight: $semibold
+		margin-left: 7px
+		margin-bottom: 10px
+		img
+			vertical-align: middle
+	textarea
+		background: #fcfcfc
+		border-radius: 23px
+		height: 100px
+		resize: none
+		width: 320px
+		border: 1px solid #e6e6e6
+		margin: 0 auto 15px
+		padding: 10px 30px
+
+
+	
+	#modal_close
+		width: 10px
+		height: 10px
+		position: absolute
+		top: 18px
+		right: 20px
+		cursor: pointer
+		display: block
+
+
+#overlay
+	z-index: 699
+	//* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa
+	position: fixed
+	//* всегдa перекрывaет весь сaйт
+	background-color: #000
+	//* чернaя
+	opacity: 0.4
+	//* нo немнoгo прoзрaчнa
+	-moz-opacity: 0.6
+	//* фикс прозрачности для старых браузеров
+	filter: alpha(opacity = 60)
+	width: 100%
+	height: 100%
+	//* рaзмерoм вo весь экрaн
+	top: 0
+	//* сверху и слевa 0, oбязaтельные свoйствa!
+	left: 0
+	cursor: pointer
+	display: none
+	//* в oбычнoм сoстoянии её нет)
+
+
 
 @media screen and (min-width: 768px)
 	.desc_none
