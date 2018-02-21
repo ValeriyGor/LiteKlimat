@@ -16,10 +16,10 @@ $bold: 700
 
 body
 	background-color: #f4f4f4
-	//background-image: url("../img/all.png")
+	background-image: url("../img/alml.png")
 	background-position: center top
 	background-repeat: no-repeat
-	background-size: 1920px
+	background-size: 375px
 
 a:hover, a:focus
 	text-decoration: none
@@ -124,9 +124,9 @@ a:hover, a:focus
 			&:hover, &.active
 				border-top: 2px solid #000
 			&.parent-elem
-				&:hover:after
+				&>a:hover:after
 					border-top-color: #05a1ff
-				&:after
+				&>a:after
 					border: 4px solid transparent
 					content: ""
 					display: inline-block
@@ -137,7 +137,7 @@ a:hover, a:focus
 					border-color: #e5e5e5 rgba(255,212,52,0) rgba(255,212,52,0)
 					border-top-width: 6px
 					border-bottom-width: 0
-					margin-left: 2px
+					margin-left: 4px
 					margin-right: 4px
 					transition: all .3s
 			&.second-parent-elem
@@ -860,6 +860,7 @@ footer
 		width: 100%
 		z-index: 300
 		.search 
+			position: static
 			input
 				width: 100%
 		.row
@@ -868,8 +869,19 @@ footer
 		ul
 			flex-direction: column
 			order: 2
+			li 				
+				.second-level
+					position: static
+				.third-level
+					position: static
+			li.active, li:hover
+				border-top: 0
 		.search
 			order: 1
+			height: 50px
+			background: #f4f4f4
+			input
+				background: #f4f4f4 url(../img/svg/ic_search_link.svg) center left 7px no-repeat
 	.mob_none
 		display: none
 
@@ -963,7 +975,7 @@ footer
 		height: 148px
 		margin-bottom: 14px
 		h2
-			font-size: 19px
+			font-size: 21px
 			margin-bottom: 0
 		p
 			font-size: 12px
@@ -1033,18 +1045,23 @@ footer
 			padding: 0 24px;
 	.benefits 
 		padding-top: 20px
+		.col-sm-3
+			div
+				padding-top: 33px
+				padding-bottom: 12px
 		h3
 			font-size: 20px
 			margin-bottom: 0px
 		img
 			max-height: 35px
-			margin: 33px auto 8px
+			margin: 35px auto 9x
 		span
 			font-size: 16px
 			line-height: 20px
 		p
 			font-size: 11px
 			line-height: 17px
+			padding: 0 20px
 	.guarantee
 		height: 220px
 		padding: 30px 29px
@@ -1058,21 +1075,23 @@ footer
 		padding: 0
 		h3
 			font-size: 20px
-			margin-bottom: 10px
+			margin-bottom: 5px
 		.carousel
 			padding: 0
 			img
 				display: block
 				margin: 0 auto
+				max-width: 85%
 			&-wrap
 				padding-top: 2px
-				padding-bottom: 35px
+				padding-bottom: 25px
 	.ventilation 
-		padding: 5px 25px
+		padding: 14px 25px
 		display: flex
 		flex-direction: column
 		h3
-			font-size: 20px
+			font-size: 18px
+			line-height: 40px
 			margin-bottom: 0
 			order: 1
 		img
@@ -1091,7 +1110,7 @@ footer
 		.carousel-partners
 			padding: 0
 			margin-bottom: 15px
-			height: 145px
+			height: 75px
 		img
 			max-width: 80%
 	footer
@@ -1101,14 +1120,17 @@ footer
 			display: flex
 			align-items: center
 			justify-content: space-between
-			padding: 25px 15px
+			padding: 13px 15px
 			>div
 				flex: 1
 				img
-					max-width: 100%
+					max-width: 87%
+					vertical-align: middle
 				span
 					width: 100%
 					text-align: right
-					color: #446aa0
-					font-size: 15px
+					color: #2B6B9F
+					font-size: 17px
+					font-weight: 500
+					letter-spacing: 0.5px
 
