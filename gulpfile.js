@@ -94,7 +94,7 @@ gulp.task('watch', ['autoprefix', 'scripts'], function() {
 
 // Сборка проекта  - clean- images - sass - mincss - autoprefix - scripts 
 
-gulp.task('build', ['clean', 'autoprefix', 'scripts', 'images'], function() {
+gulp.task('build', ['clean', 'autoprefix', 'scripts'], function() {
     var buildCss = gulp.src('./src/css/bundle.min.css')
         .pipe(gulp.dest('./build/css'));
 

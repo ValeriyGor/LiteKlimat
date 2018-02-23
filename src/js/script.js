@@ -68,29 +68,34 @@ if ($(window).width() <= '767'){
 $('.close-input').click(function () {
 			$(".search").removeClass('opened');
 			$(".search input").val('');
-			$(".search input").attr("placeholder", "Поиск по каталогу").placeholder();
+			$(".search input").attr("placeholder", "Поиск по каталогу");
+			$(".curtain").slideUp(300);
 });
 
 
 $(".search input" ).focus(function() {
 	$(".search").addClass('opened');
-	$(this).attr("placeholder", "Начните вводить название товара или услуги...").placeholder();
+	$(this).attr("placeholder", "Начните вводить название товара или услуги...");
+	if ($(window).width() > '767'){
+		$(".curtain").slideDown(300);
+	}
 });
 
 
 /*
 
 Рабочая функция для закрытия окна поиска по клику вне области, 
-разкомментить когда понадобится
+разкомментить когда понадобится*/
 
 $(document).mouseup(function (e){ // событие клика по веб-документу
 		var div = $(".search"); // тут указываем ID элемента
 		if (!div.is(e.target) // если клик был не по нашему блоку
 				&& div.has(e.target).length === 0) { // и не по его дочерним элементам
 			$(".search").removeClass('opened');
-			$(".search input").attr("placeholder", "Поиск по каталогу").placeholder();
+			$(".search input").attr("placeholder", "Поиск по каталогу");
+			$(".curtain").slideUp(300);
 		}
-	});*/
+	});
 
 
 
