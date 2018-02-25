@@ -71,6 +71,12 @@ $('.close-input').click(function () {
 			$(".search input").attr("placeholder", "Поиск по каталогу");
 			$(".curtain").slideUp(300);
 });
+$('.read-more').click(function () {
+		$(this).prev(".features").toggleClass("open");
+		var text = $('.read-more').text();
+		$(this).text(
+        text == "Все особенности" ? "Скрыть особенности" : "Все особенности");
+});
 
 
 $(".search input" ).focus(function() {
@@ -81,6 +87,21 @@ $(".search input" ).focus(function() {
 	}
 });
 
+
+$('.plus').click(function () {
+	var n = $(this).prev().val();
+	$(this).prev().val(++n);
+});
+$('.offer__remove').click(function () {
+	$(this).parent().hide(300);
+});
+
+$('.minus').click(function () {
+	var n = $(this).next().val();
+	if (n>1) {
+		$(this).next().val(--n);
+	}
+});
 
 /*
 
