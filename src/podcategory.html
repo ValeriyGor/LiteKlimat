@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
+    <title>Лайт климат</title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
+</head>
+<body>
+	<header class="header">
+		<div class="wrapper-menu desc_none">
+			<div class="line-menu half start"></div>
+			<div class="line-menu"></div>
+			<div class="line-menu half end"></div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<a href="#">
+						<img src="img/svg/logo.svg" alt="" class="header__logo mob_none">
+						<img src="img/logo-mob.png" alt="" class="header__logo desc_none">
+					</a>
+				</div>
+				<div class="col-sm-5 header__contacts">
+					<div class="col-sm-6 mail-cont">
+						<p><span class="mail-cont__icon"><img src="img/svg/ic_mail.svg" alt=""></span><a href="mailto:zakaz@LKekb.ru" class="mail-cont__text">zakaz@LKekb.ru</a></p>
+						<p><span class="mail-cont__icon"><img src="img/svg/ic_check.svg" alt=""></span><a href="" class="mail-cont__text go">Оставить заявку</a></p>
+					</div>
+					<div class="col-sm-6 mobile-cont">
+						<p><span class="mobile-cont__icon"><img src="img/svg/ic_call.svg" alt=""></span><span class="mobile-cont__text">8 343 385 84 00</span></p>
+						<p><span class="mobile-cont__icon"><img src="img/svg/ic_call.svg" alt=""></span><span class="mobile-cont__text">8 919 386 82 32</span></p>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<a href="#" class="header__cart">
+						<p><img src="img/cart-img.png" alt="">Корзина: <span>15 320 руб</span></p>
+						<span class="header__counter-order">2</span>
+					</a>
+				</div>
+			</div>
+		</div>	
+		<nav class="head-menu">
+			<div class="container">
+				<div class="row">
+					<ul class="col-sm-10 col-lg-9">
+						<li><a href="#">Главная</a></li>
+						<li class="parent-elem active"><a href="#">Продукция</a>
+							<ul class="second-level">
+								<li><a href="#">Водонагреватели</a></li>
+								<li><a href="#">Кондиционеры</a></li>
+								<li class="second-parent-elem"><a href="#">Вентиляция</a>
+									<ul class="third-level">
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+									</ul>
+								</li>
+								<li class="second-parent-elem">
+									<a href="#">Увлажнение и обогрев</a>
+									<ul class="third-level">
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+									</ul>
+								</li>
+								<li class="second-parent-elem"><a href="#">Тепловые пушки</a>
+									<ul class="third-level">
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="parent-elem"><a href="#">Расходные материалы</a>
+							<ul class="second-level">
+								<li><a href="#">Водонагреватели</a></li>
+								<li class="second-parent-elem"><a href="#">Кондиционеры</a>
+									<ul class="third-level">
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+									</ul>
+								</li>
+								<li class="second-parent-elem"><a href="#">Вентиляция</a>
+									<ul class="third-level">
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Увлажнение и обогрев</a></li>
+								<li><a href="#">Тепловые пушки</a></li>
+							</ul>
+						</li>
+						<li class="parent-elem"><a href="#">Услуги</a>
+							<ul class="second-level">
+								<li><a href="#">Водонагреватели</a></li>
+								<li class="second-parent-elem"><a href="#">Кондиционеры</a>
+									<ul class="third-level">
+										<li><a href="">Конвекторы Zilon</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Вентиляция</a></li>
+								<li class="second-parent-elem"><a href="#">Увлажнение и обогрев</a>
+									<ul class="third-level">
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Тепловые пушки</a></li>
+							</ul>
+						</li>
+						<li class="parent-elem"><a href="#">Запасные части </a>
+							<ul class="second-level">
+								<li><a href="#">Водонагреватели</a></li>
+								<li><a href="#">Кондиционеры</a></li>
+								<li class="second-parent-elem"><a href="#">Вентиляция</a>
+									<ul class="third-level">
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+										<li><a href="">Конвекторы Zilon</a></li>
+										<li><a href="">Конвекторы Ballu</a></li>
+									</ul>
+								</li>
+								<li><a href="#">Увлажнение и обогрев</a></li>
+								<li><a href="#">Тепловые пушки</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+					<div class="search col-sm-2 col-lg-3">
+						<input type="text" placeholder="Поиск по каталогу">
+						<img src="img/svg/ic_close_black.svg" class="close-input" alt="">
+					</div>
+				</div>
+			</div>	
+			<div class="curtain"></div>		
+		</nav>	
+	</header>
+	<section class="container content">
+		<div class="row">
+			<h1 class="col-sm-12 head-title no-breadscrumb">Продукция <span>6 разделов</span></h1>	
+			<div class="col-sm-12">
+				<div class="line"></div>
+			</div>
+			<div class="col-sm-9">
+				<div class="row">
+					<div class="col-sm-4 product">
+						<div class="product__img">
+							<img src="img/tovar.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 product">
+						<div class="product__img">
+							<img src="img/tovar.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 product">
+						<div class="product__img">
+							<img src="img/tovar.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 product">
+						<div class="product__img">
+							<img src="img/tovar.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 product">
+						<div class="product__img">
+							<img src="img/tovar.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4 product">
+						<div class="product__img">
+							<img src="img/tovar.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12">
+						<div class="line-gray"></div>
+					</div>					
+					<div class="col-sm-12">
+						<div class="partners">
+							<div class="partners__item">
+								<img src="img/partners/panasonic.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/elux.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/mtsbsh.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/zanussi.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/smsng.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/philips.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/sony.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/pocketbook.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/siemens.png" alt="">
+							</div>
+							<div class="partners__item">
+								<img src="img/partners/elux2.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-12">
+						<div class="form-questions">
+							<div class="col-sm-6 form-questions__text">
+								<h2>Возникли вопросы по продукции?</h2>
+								<p>Звоните нам по телефону <span>8 343 385 84 00</span> или опишите свой вопрос в заявке, чтобы наши специалисты могли подготовить информацию и проконсультировать вас за несколько минут.</p>
+								<p>Для нас важно, чтобы клиент всегда был информирован о продукции или услугах, поэтому мы стараем оперативно отвечать на все ваши вопросы и заявки.</p>
+								<img src="img/bidus.png" alt="">
+							</div>
+							<div class="col-sm-6 form-questions__form">
+								<form action="#">
+									<input type="text" placeholder="Ваше имя">
+									<input type="text" placeholder="Номер телефона">
+									<textarea name="" id="" placeholder="Опишите свой вопрос..."></textarea>
+									<button>Отправить вопрос <img src="img/svg/ic_send_gray.svg" alt=""></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="left-nav">
+					<p>Продукция</p>
+					<a href="">Водонагреватели</a>
+					<a href="">Кондиционеры</a>
+					<a href="">Вентиляция</a>
+					<a href="">Увлажнение и обогрев</a>
+					<a href="">Тепловое оборудование</a>
+					<a href="">Расходные материалы</a>
+				</div>
+				<div class="left-nav">
+					<p>Услуги</p>
+					<a href="">Алмазное бурение</a>
+					<a href="">Монтаж кондиционеров</a>
+					<a href="">Ремонт кондиционеров</a>
+					<a href="">Ремонт чиллеров, фанкойлов</a>
+					<a href="">Ремонт систем вентиляции</a>
+					<a href="">Техническое обслуживание</a>
+				</div>
+				<div class="left-nav">
+					<p>Запасные части</p>
+					<a href="">Кондиционеры</a>
+					<a href="">Вентиляции</a>
+					<a href="">Тепловые завесы</a>
+					<a href="">Водонагреватели</a>
+					<a href="">Тепловое оборудование</a>
+					<a href="">Увлажнители</a>
+					<a href="">Обогреватели</a>
+				</div>
+				<div class="left-nav">
+					<p>Тепловое оборудование</p>
+					<a href="">Дизельное</a>
+					<a href="">Газовое</a>
+					<a href="">Электрическое</a>
+					<a href="">Водяное</a>
+				</div>
+				<div class="left-nav">
+					<p>Расходные материалы</p>
+					<a href="">Кондицинеры</a>
+					<a href="">Вентиляции</a>
+				</div>
+			</div>
+		</div>
+	</section>
+		<footer>
+		<div class="container mob_none">
+			<div class="row">
+				<div class="col-sm-3">
+					<h4>Навигация</h4>
+					<a href="">Главная</a>
+					<a href="">Продукция</a>
+					<a href="">Расходные материалы</a>
+					<a href="">Услуги</a>
+					<a href="">Запасные части</a>
+					<a href="">Контакты</a>
+				</div>
+				<div class="col-sm-3">
+					<h4>Услуги</h4>
+					<a href="#">Алмазное бурение</a>
+					<a href="#">Монтаж кондиционеров</a>
+					<a href="#">Ремонт кондиционеров</a>
+					<a href="#">Ремонт чиллеров, фанкойлов</a>
+					<a href="#">Ремонт систем винтеляции</a>
+					<a href="#">Техническое обслуживание</a>
+				</div>
+				<div class="col-sm-3">
+					<h4>Запасные части</h4>
+					<a href="#">Для кондиционеров</a>
+					<a href="#">Для вентиляции</a>
+					<a href="#">Для тепловых завес</a>
+					<a href="#">Для водонагревателей</a>
+					<a href="#">Для тепловых пушек</a>
+					<a href="#">Для увлажнителей</a>
+				</div>
+				<div class="col-sm-3">
+					<h4>Контакты</h4>
+					<div><span>Телефон:</span><p>8 343 385 84 00 <br>8 919 386 82 32</p></div>
+					<div><span>Почта:</span><p><a href="mailto:zakaz@lkekb.ru">zakaz@lkekb.ru</a><a href="mailto:service@lkekb.ru">service@lkekb.ru</a></div>
+					<div><span>График:</span><p>Понедельник - Пятница
+                    <br>09:00 - 18:00</p></div>
+
+
+				</div>
+			</div>
+		</div>
+		<div class="copyright mob_none">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<img src="img/footer-logo.png" alt="">
+					</div>
+					<div class="col-sm-6">
+						<p>2010 - 2017 г. ООО «Лайт Климат» г. Екатеринбург</p>
+					</div>
+					<div class="col-sm-3">
+						<img class="bidus-logo" src="img/footer-bidus-logo.png" alt="">						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer__mob desc_none">
+			<div class="footer__mob-logo">
+				<img src="img/footer-logo.png" alt="">
+			</div>
+			<div><span>8 343 385 84 00</span></div>
+		</div>
+	</footer>
+
+
+	<div id="modal_form"><!-- Сaмo oкнo --> 
+      <img src="img/svg/ic_close_gray.svg"  id="modal_close" alt=""> <!-- Кнoпкa зaкрыть --> 
+      <h2>Оставить заявку</h2>
+      <p>Оставьте свои контакты, чтобы мы рассмотрели ваш заказ или вопрос, после чего наши специалисты свяжутся с вами </p>
+		<form action="#">
+			<input type="text" placeholder="Ваше имя / название организации">
+			<input type="text" placeholder="Номер телефона">
+			<input type="text" placeholder="Электронный адрес">
+			<textarea name="" id="" placeholder="Текст вопроса или заявки..."></textarea>
+			<label for="files" class="label-files">Прикрепить файл</label>
+  			<input id="files" type="file" style="display: none">
+			
+			<button>Отправить <img src="img/svg/ic_send_white.svg" alt=""></button>
+			<p class="personal-data">Нажимая на кнопку, вы соглашаетесь с <a href="">правилами обработки персональных данных.</a></p>
+		</form>
+	</div>
+	<div id="overlay"></div><!-- Пoдлoжкa -->
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script
+	src="http://code.jquery.com/jquery-3.3.1.min.js"
+	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="" src="js/script.js"></script>
+</body>
+</html>
