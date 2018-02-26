@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1">
     <title>Лайт климат</title>
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -48,7 +48,7 @@
 		<nav class="head-menu">
 			<div class="container">
 				<div class="row">
-					<ul class="col-sm-9">
+					<ul class="col-sm-10 col-lg-9">
 						<li class="active"><a href="#">Главная</a></li>
 						<li class="parent-elem"><a href="#">Продукция</a>
 							<ul class="second-level">
@@ -133,12 +133,13 @@
 						</li>
 						<li><a href="#">Контакты</a></li>
 					</ul>
-					<div class="search col-sm-3">
+					<div class="search col-sm-2 col-lg-3">
 						<input type="text" placeholder="Поиск по каталогу">
 						<img src="img/svg/ic_close_black.svg" class="close-input" alt="">
 					</div>
 				</div>
-			</div>			
+			</div>	
+			<div class="curtain"></div>		
 		</nav>	
 	</header>
 	<section class="container content">
@@ -148,61 +149,194 @@
 				<a href="#">Вентиляция</a>
 				<span>Ballu Air master</span>
 			</div>
-			<div class="col-sm-12">
-				<h1>Вентиляция</h1>
-				<h1>Ballu Air master</h1>
+			<div class="col-sm-12">				
+				<div class="banner" class="banner" style="background-image: url(../img/banner.png)">
+					<h1>Вентиляция</h1>
+					<h1>Ballu Air master</h1>
+				</div>
 			</div>
 			<div class="col-sm-12 prod">
-				<div class="col-sm-3 prod__img"></div>
-				<div class="col-sm-9 prod__description">
-					<h4>Промышленный концерн Ballu представляет инновационный прибор для создания и поддержания здорового микроклимата в помещении.</h4>
-					<p>Функциональный особенности:</p>
-					<ul>
-						<li>Постоянный приток свежего воздуха до 200м³ в час;</li>
-						<li>Пять скоростных режимов позволяют выбрать подходящую интенсивность притока для помещений площадью до 75м².</li>
-						<li>Шести-ступенчатая система очистки воздуха устраняет 99,9 % загрязнений в воздухе, поглощает неприятные запахи, обеззараживает от вирусов и бактерий.</li>
-						<li>Датчик загрязнения воздуха контролирует уровень взвешенных частиц в воздухе помещения и, изменяя скорость потока, автоматически регулирует интенсивность очистки.</li>
-						<li>Высокоэффективный керамический нагревательный элемент автоматически подогревает входящий воздух до заданной температуры при внешней температуре от -40°C.</li>
-						<li>Бесшумный ночной режим работы. Чистый свежий воздух во время сна.</li>
-					</ul>
+				<div class="prod__wrap">
+					<div class="col-sm-4 prod__img">						
+						<div class="slider-for">
+							<div class="item">
+								<img src="img/slider/1.png" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/2.jpg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/3.jpeg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/4.jpg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/5.jpg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/6.jpg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<iframe src="https://www.youtube.com/embed/on4OOf0xM_Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+						</div>
+
+						<div class="slider-nav">
+							<div class="item">
+								<img src="img/slider/1.png" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/2.jpg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/3.jpeg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/4.jpg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/5.jpg" alt="image"  draggable="false"/>
+							</div>
+							<div class="item">
+								<img src="img/slider/6.jpg" alt="image"  draggable="false"/>
+							</div>
+							<div class="video item">
+								<img src="img/slider/video.png" alt="">
+							</div>
+						</div>
+
+					</div>
+					<div class="col-sm-8 prod__description">
+						<h4>Промышленный концерн Ballu представляет инновационный прибор для создания и поддержания здорового микроклимата в помещении.</h4>
+						<p>Функциональные особенности:</p>
+						<ul class="features">
+							<li>Постоянный приток свежего воздуха до 200м³ в час;</li>
+							<li>Пять скоростных режимов позволяют выбрать подходящую интенсивность притока для помещений площадью до 75м².</li>
+							<li>Шести-ступенчатая система очистки воздуха устраняет 99,9 % загрязнений в воздухе, поглощает неприятные запахи, обеззараживает от вирусов и бактерий.</li>
+							<li> Датчик загрязнения воздуха контролирует уровень взвешенных частиц в воздухе помещения и, изменяя скорость потока, автоматически регулирует интенсивность очистки.</li>
+							<li>Высокоэффективный керамический нагревательный элемент автоматически подогревает входящий воздух до заданной температуры при внешней температуре от -40°C.</li>
+							<li>Бесшумный ночной режим работы. Чистый свежий воздух во время сна.</li>
+							<li>Постоянный приток свежего воздуха до 200м³ в час;</li>
+							<li>Пять скоростных режимов позволяют выбрать подходящую интенсивность притока для помещений площадью до 75м².</li>
+							<li>Шести-ступенчатая система очистки воздуха устраняет 99,9 % загрязнений в воздухе, поглощает неприятные запахи, обеззараживает от вирусов и бактерий.</li>
+							<li> Датчик загрязнения воздуха контролирует уровень взвешенных частиц в воздухе помещения и, изменяя скорость потока, автоматически регулирует интенсивность очистки.</li>
+							<li>Высокоэффективный керамический нагревательный элемент автоматически подогревает входящий воздух до заданной температуры при внешней температуре от -40°C.</li>
+							<li>Бесшумный ночной режим работы. Чистый свежий воздух во время сна.</li>
+							<li>Постоянный приток свежего воздуха до 200м³ в час;</li>
+							<li>Пять скоростных режимов позволяют выбрать подходящую интенсивность притока для помещений площадью до 75м².</li>
+							<li>Шести-ступенчатая система очистки воздуха устраняет 99,9 % загрязнений в воздухе, поглощает неприятные запахи, обеззараживает от вирусов и бактерий.</li>
+							<li> Датчик загрязнения воздуха контролирует уровень взвешенных частиц в воздухе помещения и, изменяя скорость потока, автоматически регулирует интенсивность очистки.</li>
+							<li>Высокоэффективный керамический нагревательный элемент автоматически подогревает входящий воздух до заданной температуры при внешней температуре от -40°C.</li>
+							<li>Бесшумный ночной режим работы. Чистый свежий воздух во время сна.</li>
+							
+						</ul>
+						<span class="read-more">Все особенности</span>
+					</div>
 				</div>
-			</div>
-			<div class="col-sm-12 presentation">
-				<h1>Презентация</h1>
-				<h1>Ballu Air master</h1>
-				<a href="#">Открыть презентацию</a>
 			</div>
 			<div class="col-sm-12">
-				<h2>Вентиляция Ballu Air master</h2>
-				<div class="col-sm-3 product">
-					<div class="product__img">
-						<img src="" alt="">
-					</div>
-					<div class="product__description">
-						<a href="#">Ballu Air Master BMAC - 200 Base</a>
-						<p>Вентиляция</p>
-						<div class="product__characteristics">
-							<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
-							<p><span>Нагреватель</span> <span>Электрический</span></p>
-							<p><span>Напряжение</span> <span>220 В</span></p>
-						</div>
-						<div>
-							<span class="product__price">22 750 руб</span>
-							<span class="product__status">В наличии</span>
-							<a href="#">Добавить в корзину</a>
-						</div>
-					</div>
+				<div class="presentation" style="background-image: url(img/presentation-bg.png)">
+					<h1>Презентация</h1>
+					<h1>Ballu Air master</h1>
+					<a href="#">Открыть презентацию</a>
 				</div>
+				
 			</div>
-			<div class="col-sm-12 back_form">
-				<h3>Хотите заказать приточный очиститель Ballu Air? </h3>
-				<p>Звоните нам по телефону 8 343 385 84 00 или заполните форму:</p>
-				<form action="#">
-					<input type="text" placeholder="Укажите ваше имя">
-					<input type="text" placeholder="Введите ваш e-mail">
-					<input type="text" placeholder="Оставьте номер телефона">
-					<button>Отправить заявку</button>
-				</form>
+			<div class="col-sm-12 looks-like">
+				<h2>Вентиляция Ballu Air master</h2>
+				<div class="row">
+					<div class="col-sm-3 product">
+						<div class="product__img">
+							<img src="img/air.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 product">
+						<div class="product__img">
+							<img src="img/air.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 product">
+						<div class="product__img">
+							<img src="img/air.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3 product">
+						<div class="product__img">
+							<img src="img/air.png" alt="">
+						</div>
+						<div class="product__description">
+							<a href="#">Ballu Air Master BMAC - 200 Base</a>
+							<p>Вентиляция</p>
+							<div class="product__characteristics">
+								<p><span>Приточная установка</span> <span>200 м³/ч</span></p>
+								<p><span>Нагреватель</span> <span>Электрический</span></p>
+								<p><span>Напряжение</span> <span>220 В</span></p>
+							</div>
+							<div class="order-wrap">
+								<p class="product__price">22 750 руб</p>
+								<p class="product__status">В наличии <span class="marker"></span></p>
+								<!--<a href="#">Добавить в корзину</a>-->
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="col-sm-12">
+				<div class="back_form back-logo">
+					<h3>Хотите заказать приточный очиститель Ballu Air? </h3>
+					<p>Звоните нам по телефону <b>8 343 385 84 00</b> или заполните форму:</p>
+					<form action="#">
+						<div class="flex">
+							<input type="text" placeholder="Укажите ваше имя">
+							<input type="text" placeholder="Введите ваш e-mail">
+							<input type="text" placeholder="Оставьте номер телефона">
+						</div>
+						<button>Отправить заявку <img src="img/svg/ic_send_gray.svg" alt=""></button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -298,5 +432,23 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script type="" src="js/script.js"></script>
+
+    <script>
+    	$('.slider-for').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  asNavFor: '.slider-nav'
+		});
+		$('.slider-nav').slick({
+		  slidesToShow: 4,
+		  slidesToScroll: 1,
+		  asNavFor: '.slider-for',
+		  dots: false,
+		  focusOnSelect: true
+
+		});
+    </script>
 </body>
 </html>

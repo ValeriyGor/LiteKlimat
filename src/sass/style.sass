@@ -16,8 +16,8 @@ $bold: 700
 
 body
 	background-color: #f4f4f4
-	background-image: url("../img/all.png")
-	background-position: center bottom
+	//background-image: url("../img/all.png")
+	background-position: center top
 	background-repeat: no-repeat
 	background-size: 1920px
 
@@ -1082,6 +1082,18 @@ h1.head-title
 	margin-bottom: 30px
 	color: #000
 	font-family: 'PantonSemiBold'
+	&.no-breadscrumb
+		padding-top: 20px
+	span
+		color: #999
+		font-family: 'PantonLight'
+		margin-left: 15px
+.line
+	height: 2px
+	background: #00d6be
+	margin-top: 7px
+	margin-bottom: 50px
+
 .back_form
 	padding: 39px 70px 47px
 	margin-bottom: 60px
@@ -1357,6 +1369,274 @@ a
 				font-size: 14px
 				color: #000
 				font-weight: $semibold
+.product-info
+	background: #fff
+	border-radius: 3px
+	overflow: hidden
+	padding: 36px 6px 34px 23px
+	.prod__wrap
+		padding: 0
+.head-info
+	&__general		
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		margin-bottom: 14px
+	&__price
+		font-size: 30px
+		font-weight: $bold
+		line-height: 34px
+	.product__status
+		font-size: 13px
+		line-height: 26px
+	&__properties
+		height: 180px
+		overflow: hidden
+		&.open
+			height: auto
+		p
+			display: flex
+			align-items: center
+			justify-content: space-between
+			background: url(../img/dots.png) center bottom 13px repeat-x
+			span
+				font-size: 14px
+				line-height: 36px
+				background: #fff
+	.open__more
+		font-size: 14px
+		font-weight: $semibold
+		color: #256aa3
+		display: block
+		margin-top: 8px
+		transition: all 0.3s
+		cursor: pointer
+		&:hover
+			color: #29567b
+	.more
+		font-size: 13px
+		line-height: 22px
+		margin-top: 23px
+	.add-to-cart
+		background: #00d6be
+		text-align: center
+		width: 100%
+		display: block
+		height: 50px
+		line-height: 50px
+		color: #fff
+		transition: all 0.3s
+		border-radius: 25px
+		font-size: 16px
+		font-weight: $semibold
+		margin-top: 25px
+		&:hover
+			background: #03b29e
+		img
+			vertical-align: middle
+			margin-left: 5px
+	.morelink
+		display: block
+	.morecontent
+		span
+			display: none
+.tovar-help
+	padding: 0 8px 0 20px
+	&__head
+		margin-bottom: 6px	
+		padding: 10px 0
+		p
+			font-size: 14px
+			font-weight: $semibold
+		a
+			float: right
+			color: #256aa3
+			transition: all 0.3s
+			&:hover
+				color: #1b5381
+	&__doc
+		p
+			color: #999
+		a
+			font-size: 14px
+			color: #256aa3
+			&:hover
+				color: #1b5381
+		span
+			font-size: 14px
+			color: #999
+
+.small-product
+	border: 1px solid #e6e6e6
+	padding: 14px 15px
+	overflow: hidden
+	margin-bottom: 15px
+	&__img
+		float: left
+		margin-right: 15px
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		border: 1px solid #e7e7e7
+		display: flex
+		overflow: hidden
+		img
+			max-width: 80%
+			margin: auto
+		&.full-circle
+			img
+				width: 100%
+				max-width: 100%
+	&__text
+		width: 250px
+		a
+			text-overflow: ellipsis
+			white-space: nowrap
+			overflow: hidden
+			display: block
+			color: #256aa3
+			font-size: 14px
+			line-height: 24px
+			&:hover
+				color: #1b5381
+		p
+			color: #000
+			font-size: 14px
+			span
+				font-weight: $semibold
+
+.left-nav
+	padding-top: 2px
+	padding-bottom: 20px
+	border-bottom: 1px solid #e6e6e6
+	margin-bottom: 22px
+	p
+		color: #000
+		font-size: 14px
+		line-height: 26px
+		font-weight: $semibold
+	a
+		font-size: 14px
+		line-height: 26px
+		color: #256aa3
+		display: block
+		&:hover
+			text-decoration: underline
+
+.category-item
+	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.03)
+	height: 300px
+	background: #fff
+	text-align: center
+	border-radius: 3px
+	width: 100%
+	display: block
+	margin-bottom: 30px
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	padding-bottom: 15px
+	transition: all 0.3s
+	box-shadow: 0
+	&:hover
+		box-shadow: inset 0 0 100px #f0f0f0
+	&__img
+		height: 170px
+		width: 170px
+		border-radius: 50%
+		overflow: hidden
+		margin-bottom: 20px
+	&__name
+		font-size: 18px
+		color: #256aa3
+		max-width: 150px
+.line-gray
+	height: 1px
+	background: #e6e6e6
+	width: 100%
+	margin-top: 7px
+	margin-bottom: 29px
+.partners
+	padding: 25px 30px
+	display: flex
+	margin-bottom: 32px
+	align-items: center
+	flex-wrap: wrap
+	background: #fff
+	border-radius: 3px
+	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.03)
+	justify-content: space-between
+	&__item
+		border: 1px solid #e6e6e6
+		border-radius: 3px
+		width: 145px
+		margin: 5px 0
+		height: 57px
+		display: flex
+		background-color: #fff
+		img
+			display: block
+			margin: auto
+.form-questions
+	margin-bottom: 72px
+	overflow: hidden
+	background: #fff
+	box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.03)
+	border-radius: 3px
+	&__text
+		padding: 30px 50px 40px 40px
+		background: #fcfcfc
+		border-right: 1px solid #f4f4f4
+		h2
+			max-width: 300px
+			margin-bottom: 17px
+		img
+			width: 71px
+		p
+			font-size: 14px
+			line-height: 24px
+			margin-bottom: 20px
+			span
+				font-weight: $semibold
+	&__form
+		padding: 27px 50px 
+		input
+			border: 1px solid #e6e6e6
+			border-radius: 25px
+			background: #fcfcfc
+			display: block
+			width: 100%
+			height: 50px
+			margin-bottom: 20px
+			padding-left: 22px
+		textarea
+			border: 1px solid #e6e6e6
+			border-radius: 25px
+			background: #fcfcfc
+			display: block
+			height: 150px
+			resize: none
+			padding-top: 15px
+			padding-left: 22px
+			width: 100%
+			margin-bottom: 20px
+		button
+			font-size: 16px
+			height: 60px
+			border: 1px solid #e6e6e6
+			text-align: center
+			border-radius: 30px
+			color: #000
+			width: 100%
+			background: #fff
+			transition: all 0.3s
+			&:hover
+				background: #e6e6e6
+			img
+				vertical-align: middle
+				margin-left: 7px
+
 
 
 
