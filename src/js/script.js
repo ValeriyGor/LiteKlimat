@@ -174,4 +174,11 @@ $(document).ready(function() {
         $(this).prev().toggle();
         return false;
     });
-});
+
+    $(".button-open-list").click(function(){
+        $(this).parent().toggleClass('open') ;
+        var text = $(this).text();
+		$(this).text(
+	    text == "Показать полностью" ? "Скрыть" : "Показать полностью");
+    });
+   });

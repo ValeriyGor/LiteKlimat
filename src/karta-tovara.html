@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" type="text/css" href="css/bundle.min.css">
 </head>
-<body>
+<body class="white-mob-back">
 	<header class="header">
 		<div class="wrapper-menu desc_none">
 			<div class="line-menu half start"></div>
@@ -280,7 +280,7 @@
 					<p>Подробности у менеджера</p>
 				</div>				
 			</div>
-			<div class="col-sm-12">
+			<div class="col-sm-12 back_form__wrap">
 				<div class="back_form back-logo">
 					<h3>Хотите заказать приточный очиститель Ballu Air? </h3>
 					<p>Звоните нам по телефону <b>8 343 385 84 00</b> или заполните форму:</p>
@@ -453,8 +453,20 @@
 		  slidesToScroll: 1,
 		  asNavFor: '.slider-for',
 		  dots: false,
-		  focusOnSelect: true
-
+		  focusOnSelect: true,
+		  responsive: [
+		    {
+		      breakpoint: 767,
+		      settings: {
+		        slidesToShow: 3,
+		        centerMode: true,
+        		centerPadding: '10px'
+		      }
+		    }
+		    // You can unslick at a given breakpoint now by adding:
+		    // settings: "unslick"
+		    // instead of a settings object
+		  ]
 		});
     </script>
 </body>

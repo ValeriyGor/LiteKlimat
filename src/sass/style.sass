@@ -16,10 +16,10 @@ $bold: 700
 
 body
 	background-color: #f4f4f4
-	//background-image: url("../img/all.png")
+	//background-image: url("../img/alml.png")
 	background-position: center top
 	background-repeat: no-repeat
-	background-size: 1920px
+	background-size: 375px
 
 a:hover, a:focus
 	text-decoration: none
@@ -1249,7 +1249,8 @@ a
 		align-items: center
 		img
 			margin: auto
-			max-width: 100%
+			max-width: 80%
+			max-height: 80%
 	&__name
 		width: 450px
 		a
@@ -1398,7 +1399,8 @@ a
 				overflow: hidden
 				width: 100%
 				text-overflow: ellipsis
-
+				&:hover
+					color: #184870
 			p
 				font-size: 14px
 				color: #000
@@ -1549,6 +1551,38 @@ a
 		font-size: 14px
 		line-height: 26px
 		font-weight: $semibold
+
+	.button-open-list
+		color: #256aa3
+		font-size: 13px
+		font-weight: $semibold
+		transition: all 0.3s
+		&:hover
+			cursor: pointer
+			color: #1b4b72
+		&:after
+			border: 4px solid transparent
+			content: ""
+			display: inline-block
+			height: 0
+			width: 0
+			position: relative
+			top: -1px
+			border-color: #ccc rgba(255,212,52,0) rgba(255,212,52,0)
+			border-top-width: 6px
+			border-bottom-width: 0
+			margin-left: 5px
+			transition: all .3s
+	&.open
+		.button-open-list
+			margin-top: 6px
+			&:after
+				transform: scale(1, -1)
+		.list-filt.toggled
+			height: auto
+	.list-filt.toggled
+		height: 150px
+		overflow: hidden
 	a
 		font-size: 14px
 		line-height: 26px
@@ -2954,7 +2988,252 @@ a
 		#modal_close
 			top: 10px
 			right: 12px
+	.breadscrumb
+		display: none
+	.back_form 
+		padding: 0
+		.flex
+			flex-direction: column
+	.banner
+		margin-top: 5px
+		height: 165px
+		border-radius: 3px
+		margin-bottom: 24px
+		h1
+			font-size: 25px
+			line-height: 28px
+			padding-left: 45px
+	body.white-mob-back
+		background-color: #fff
+	.prod
+		&__wrap
+			display: flex
+			flex-direction: column-reverse
+			padding: 0
+			margin-bottom: 30px
+			box-shadow: none
+			h4
+				margin-bottom: 16px
+			p
+				font-size: 13px
+				line-height: 18px
+			li
+				font-size: 10px
+				line-height: 18px
+				margin-bottom: 8px
+				margin-left: 17px
+				&:before
+					top: 9px
+					height: 1px
+			ul
+				height: 130px
+			span.read-more
+				font-size: 12px
+				padding-left: 17px
+				margin-top: 5px
+			.slider-for
+				margin: 0
 
+		&__description
+			padding: 0
+			margin-bottom: 21px
+			h4
+				font-size: 14px
+				line-height: 22px
+		.slider
+			&-for
+				height: 300px
+			&-nav
+				position: absolute
+				top: 105px	
+				right: -195px
+				width: 300px	
+				height: 90px			
+				transform: rotate(-90deg)
+				.item
+					transform: rotate(90deg)
+					height: 90px
+					margin: 0 10px
+		&__img
+			padding: 0
+			position: relative
+	.presentation
+		padding-top: 27px
+		height: 330px
+		padding-left: 40px
+		margin-bottom: 30px
+		background-position: right bottom
+		h1
+			font-size: 25px
+			line-height: 30px
+			&:nth-of-type(2)
+				margin-bottom: 8px
+		a
+			height: 26px
+			line-height: 26px
+			font-size: 10px
+			padding: 0 25px
+	.product
+		margin-bottom: 22px
+		&__characteristics
+			display: none
+		&__img
+			height: 123px
+		&__description
+			padding: 10px 14px
+			a
+				font-size: 14px
+				line-height: 20px
+			.product__price
+				font-size: 12px
+				line-height: 20px
+			.product__status
+				font-size: 9px
+				line-height: 20px
+				.marker
+					width: 12px
+					height: 12px
+					background-size: 8px
+		.order-wrap
+			padding: 0
+			a
+				font-size: 10px
+				line-height: 24px
+				height: 24px
+				img
+					width: 10px
+					margin-left: 2px
+
+		&__category
+			display: none
+
+	.looks-like
+		h2
+			display: none
+		.row
+			display: flex
+			flex-direction: row
+			flex-wrap: wrap
+			justify-content: space-between
+			align-items: center
+			padding-left: 7px
+			padding-right: 7px
+			>div
+				width: 50%
+				padding: 0 8px
+	.back_form
+		box-shadow: none
+		padding: 20px 15px 30px
+		margin-bottom: 30px
+		&__wrap
+			border-bottom: 1px solid #e5e5e5
+			padding: 0
+			background: #fff
+		&.back-logo
+			background: none
+			padding-bottom: 0
+		h3
+			font-size: 19px
+			padding: 0 25px
+		p
+			font-size: 13px
+			padding: 0 35px
+		input
+			height: 41px
+			padding-left: 22px
+			width: 100%
+			margin: 5px 0 13px 0
+			font-size: 12px
+		textarea
+			padding-left: 22px
+			font-size: 12px
+			margin-bottom: 6px
+		button
+			width: 225px
+			height: 45px
+			font-size: 12px 
+			&.button-gray
+				font-size: 15px
+				height: 41px
+	.help-block
+		display: none
+	h1.head-title
+		font-size: 24px
+		line-height: 45px
+		margin-bottom: 5px
+	.offer
+		flex-wrap: wrap
+		height: auto
+		width: 48%
+		padding: 0
+		&__img
+			width: 100%
+			height: 125px
+			background: #eee
+			order: 1
+		&__wrap
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			align-items: flex-start
+		&__remove
+			display: none
+		&__name
+			padding-left: 15px
+			padding-right: 15px
+			padding-top: 10px
+			a
+				font-size: 14px
+				line-height: 20px
+				padding-left: 0
+			order: 2
+		&__price
+			order: 3
+			width: 49%
+			display: inline-block
+			padding-left: 15px
+			font-size: 12px
+		&__status
+			width: 49%
+			display: inline-block
+			order: 4
+			font-size: 9px
+			text-align: right
+			padding-right: 7px
+			.marker
+				height: 12px
+				width: 12px
+				background-size: 6px
+				margin: 0 2px
+				vertical-align: text-bottom
+
+		&__count
+			order: 5
+			input[type=number]
+				width: 40%
+			div
+				width: 30%
+				&.minus, &.plus
+					border-radius: 0
+			.minus
+				border-left: 0
+			.plus
+				border-right: 0
+	.package 
+		display: flex
+		flex-direction: column-reverse
+		margin-bottom: 25px
+		a
+			margin-left: 0
+			margin-bottom: 14px
+		.button-white
+			width: 100%
+		.button-gray
+			width: 100%
+	.you-seen
+		display: none
+	.product-info
+		padding: 5px 0
 
 
 @media screen and (max-width: 359px)
