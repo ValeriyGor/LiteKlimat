@@ -191,4 +191,8 @@ $(document).ready(function() {
         $(this).parent().toggleClass('open');
         $('.refresh-filters').appendTo($(this).parent());
     });
+    $(".category-list-wrap__head").click(function(){
+        $(this).parent().toggleClass('open') ;
+        $('.category-list-nav').slideToggle(300);
+    });
    });
