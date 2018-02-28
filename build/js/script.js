@@ -187,9 +187,11 @@ $(document).ready(function() {
         $('.list-filters').slideToggle(300);
     });
     $(".left-nav p").click(function(){
-        $(this).next().slideToggle(00);
-        $(this).parent().toggleClass('open');
-        $('.refresh-filters').appendTo($(this).parent());
+		if ($(window).width() <= '767'){    	
+	        $(this).next().slideToggle(00);
+	        $(this).parent().toggleClass('open');
+	        $('.refresh-filters').appendTo($(this).parent());
+	    }
     });
     $(".category-list-wrap__head").click(function(){
         $(this).parent().toggleClass('open') ;
