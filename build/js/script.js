@@ -174,4 +174,21 @@ $(document).ready(function() {
         $(this).prev().toggle();
         return false;
     });
-});
+
+    $(".button-open-list").click(function(){
+        $(this).parent().toggleClass('open') ;
+        var text = $(this).text();
+		$(this).text(
+	    text == "Показать полностью" ? "Скрыть" : "Показать полностью");
+    });
+
+    $(".filters-wrap__head").click(function(){
+        $(this).parent().toggleClass('open') ;
+        $('.list-filters').slideToggle(300);
+    });
+    $(".left-nav p").click(function(){
+        $(this).next().slideToggle(00);
+        $(this).parent().toggleClass('open');
+        $('.refresh-filters').appendTo($(this).parent());
+    });
+   });

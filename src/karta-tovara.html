@@ -203,7 +203,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 head-info__wrap">
 						<div class="head-info">
 							<div class="head-info__general">
 								<p class="head-info__price"><span>2 390 руб</span> </p>
@@ -226,49 +226,56 @@
 							<a href="#" class="add-to-cart">Добавить в корзину <img src="img/svg/ic_cart_white.svg" alt=""></a>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<div class="col-sm-4 tovar-help__wrap">
 						<div class="tovar-help">
-							<div class="tovar-help__head">
-								<a href="#">Смотреть все</a>
-								<p>Запасные части</p>	
-							</div>						
-							<div class="small-product">
-								<div class="small-product__img">
-									<img src="img/svg/ic_noava.svg" alt="">
+							<div class="tovar-help__item">
+								<div class="tovar-help__head">
+									<p>Запасные части</p>	
+								</div>						
+								<div class="small-product">
+									<div class="small-product__img">
+										<img src="img/svg/ic_noava.svg" alt="">
+									</div>
+									<div class="small-product__text">
+										<a href="#">Шланг дренажный ф 20 542 2154 </a>
+										<p>Цена: <span>1 160 руб</span></p>
+									</div>
+								</div>					
+								<div class="small-product">
+									<div class="small-product__img">
+										<img src="img/prod-img2.png" alt="">
+									</div>
+									<div class="small-product__text">
+										<a href="#">Проветриватель стенной вентс пс - 100</a>
+										<p>Цена: <span>1 160 руб</span></p>
+									</div>
 								</div>
-								<div class="small-product__text">
-									<a href="#">Шланг дренажный ф 20 542 2154 </a>
-									<p>Цена: <span>1 160 руб</span></p>
-								</div>
-							</div>					
-							<div class="small-product">
-								<div class="small-product__img">
-									<img src="img/prod-img2.png" alt="">
-								</div>
-								<div class="small-product__text">
-									<a href="#">Проветриватель стенной вентс пс - 100</a>
-									<p>Цена: <span>1 160 руб</span></p>
-								</div>
+								<a href="#" class="seen-all">Смотреть все</a>
 							</div>
-							<div class="tovar-help__head">
-								<a href="#">Смотреть все</a>	
-								<p>Рекомендуемые услуги</p>
-							</div>
-							<div class="small-product">
-								<div class="small-product__img full-circle">
-									<img src="img/usluga.png" alt="">
+							<div class="tovar-help__item">
+								<div class="tovar-help__head">	
+									<p>Рекомендуемые услуги</p>
 								</div>
-								<div class="small-product__text">
-									<a href="#">Ремонт оборудования</a>
-									<p>Цена: <span>договорная</span></p>
+								<div class="small-product">
+									<div class="small-product__img full-circle">
+										<img src="img/usluga.png" alt="">
+									</div>
+									<div class="small-product__text">
+										<a href="#">Ремонт оборудования</a>
+										<p>Цена: <span>договорная</span></p>
+									</div>
 								</div>
+								<a href="#" class="seen-all">Смотреть все</a>
 							</div>
-							<div class="tovar-help__head">
-								<p>Документация</p>
-							</div>
-							<div class="tovar-help__doc">
-								<p>&#8212; <a href="">Паспорт</a><span>.docx</span></p>
-								<p>&#8212; <a href="">Презентация</a><span>.pptx</span></p>
+
+							<div class="tovar-help__item documents">
+								<div class="tovar-help__head">
+									<p>Документация</p>
+								</div>
+								<div class="tovar-help__doc">
+									<p>&#8212; <a href="">Паспорт</a><span>.docx</span></p>
+									<p>&#8212; <a href="">Презентация</a><span>.pptx</span></p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -441,6 +448,9 @@
     <script type="" src="js/script.js"></script>
 
     <script>
+    	if ($(window).width() <= '767'){
+    		$('.head-title').appendTo($('.head-info__general'));
+		}
     	$('.slider-for').slick({
 		  slidesToShow: 1,
 		  slidesToScroll: 1,
