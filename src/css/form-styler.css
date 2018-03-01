@@ -644,3 +644,12 @@ input[type='button'].styler[disabled], input[type='submit'].styler[disabled] {
   .jq-checkbox.checked {
     -webkit-background-size: 8px 8px;
     background-size: 8px; } }
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .jq-checkbox, .jq-radio {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px; }
+  .jq-checkbox.checked {
+    -webkit-background-size: 10px 10px;
+    background-size: 10px; } }
