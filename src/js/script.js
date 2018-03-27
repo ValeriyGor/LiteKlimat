@@ -159,6 +159,14 @@ $('.open__more').click(function () {
     text == "Все характеристики" ? "Скрыть характеристики" : "Все характеристики");
 });
 
+$('.button-add-to-cart').click(function (e) {
+	e.preventDefault();
+	$(this).toggleClass("open");
+	var text = $(this).text();
+	$(this).text(
+    text == "В корзину" ? "Добавлен" : "В корзину");
+});
+
 /*
 
 Рабочая функция для закрытия окна поиска по клику вне области, 
@@ -183,3 +191,16 @@ wrapperMenu.addEventListener('click', function(){
 	$(".head-menu").slideToggle(300);
 	$(".head-menu").toggleClass("open");
 })
+
+$('input[type=checkbox]').styler(); // стилизация чекбоксов
+// скрипт для добавления кнопки показать полностью
+if ($(window).width() > '767'){
+	$( ".history-list__text ul" ).each(function() { 
+	  	var n = $(this).children('li').length;
+	  	console.log(n);
+    	if(n>2){
+    	$(this).parent().append("<p class='button-open-list'>Показать полностью</p>");
+    	$(this).addClass('toggled');
+		}
+	});
+}

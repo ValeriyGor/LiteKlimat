@@ -1541,6 +1541,50 @@ a
 			font-size: 14px
 			span
 				font-weight: $semibold
+.elements-sorting
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 30px
+	.variant
+		padding-left: 8px
+		padding-top: 5px
+		a
+			margin-left: 25px
+			color: #256aa3			
+			transition: all 0.3s
+			&.active, &:hover
+				color: #000
+	.view-sort
+		padding: 5px 10px 0 0
+		&__tile
+			line-height: 16px
+			margin-left: 20px
+			&:after
+				content: ""
+				width: 16px
+				height: 16px
+				display: inline-block
+				background: url(../img/tile-icon.png) center no-repeat
+				background-size: contain
+				vertical-align: sub
+				margin-left: 9px
+		&__list
+			line-height: 16px
+			&:after
+				content: ""
+				width: 16px
+				height: 16px
+				display: inline-block
+				background: url(../img/list_icon.png) center no-repeat
+				background-size: contain
+				vertical-align: sub
+				margin-left: 9px
+		a
+			color: #969696
+			transition: all 0.3s
+			&.active, &:hover
+				color: #000
 
 .left-nav
 	padding-top: 2px
@@ -1780,6 +1824,93 @@ a
 			img
 				vertical-align: middle
 				margin-left: 7px
+
+.table-list
+	border-radius: 3px
+	background-color: #fff
+	margin-bottom: 40px
+	.button-add-to-cart
+		cursor: pointer
+		color: #000
+		transition: all 0.15s
+		a
+			color: #000
+			transition: all 0.15s
+		&:after
+			content: ""
+			width: 15px
+			height: 15px
+			background: url('../img/svg/ic_cart_blue.svg') center no-repeat
+			background-size: contain
+			vertical-align: middle
+			transition: all 0.15s
+			display: inline-block
+			margin-left: 6px
+			padding-right: 23px
+		&.open
+			color: #999
+			a
+				color: #999
+			&:after
+				background: url('../img/svg/ic_cart_grey.svg') center no-repeat
+				background-size: contain
+	&__item
+		border-top: 1px solid #e6e6e6
+		height: 50px
+		transition: all 0.3s
+		&:hover
+			background-color: #fcfcfc
+		&>div
+			display: flex
+			align-items: center
+			justify-content: flex-start
+		.button-add-to-cart
+			justify-content: flex-end
+		.table-list__name
+			color: #256aa3
+			font-weight: 600
+			padding-left: 27px
+		input
+			width: 80px
+			height: 30px
+			border-radius: 3px
+			border: 1px solid #e6e6e6
+			text-align: center
+	&__head
+		height: 50px
+		span
+			color: #256aa3
+			font-size: 14px
+		&>div
+			display: flex
+			align-items: center
+			justify-content: flex-start
+
+	&>div
+		display: flex
+		&>div:nth-of-type(1)
+		 	max-width: 277px
+		// &>div:nth-of-type(2)
+		// 	flex: 1
+		// 	span
+		// 		padding-left: 10px
+		// &>div:nth-of-type(3)
+		// 	flex: 2
+		// 	span
+		// 		padding-left: 56px
+		// &>div:nth-of-type(4)
+		// 	flex: 1
+		// 	span
+		// 		padding-left: 9px
+		// &>div:nth-of-type(5)
+		// 	flex: 2
+	&__name
+		span
+			padding-left: 12px
+	.marker
+		width: 15px
+		height: 15px
+		margin-right: 7px
 
 
 
@@ -2340,6 +2471,30 @@ a
 				color: #000
 				background: url(../img/dots.png) center bottom 6px repeat-x
 				background-size: 5px
+	.table-list
+		.marker
+			width: 12px
+			height: 12px
+			margin-right: 5px
+		&__head 
+			height: 40px
+			span
+				font-size: 12px	
+	.table-list__name span
+		padding-left: 8px
+	.table-list__item
+		height: 40px
+		span, div
+			font-size: 12px
+		input
+			margin-left: 3px
+			width: 65px
+			height: 25px
+	.table-list__name 
+		padding-left: 20px
+		a
+			font-size: 12px
+
 	.back_form 
 		padding: 34px 48px 28px
 		margin-bottom: 40px
@@ -2665,6 +2820,38 @@ a
 	.container
 		padding-left: 20px
 		padding-right: 20px
+	
+	.table-list
+		.marker
+			width: 10px
+			height: 10px
+			margin-right: 3px
+		&__head 
+			height: 30px
+			span
+				font-size: 10px	
+	.table-list__name span
+		padding-left: 6px
+	.table-list__item
+		height: 30px
+		span, div
+			font-size: 10px
+		input
+			margin-left: 2px
+			width: 45px
+			height: 20px
+	.table-list .button-add-to-cart:after
+		width: 10px
+		height: 10px
+		margin-left: 2px
+		padding-right: 15px
+		position: relative
+		top: 1px
+	.table-list__name 
+		a
+			font-size: 10px
+	.table-list__item .table-list__name		
+		padding-left: 16px
 
 	h2
 		font-size: 20px
@@ -3495,8 +3682,260 @@ a
 
 	
 
+@media screen and (min-width: 1200px)
+	.product-list
+		.product
+			display: flex
+			border-radius: 3px
+			margin-bottom: 20px
+			&__description
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				box-shadow: none
+				flex: 2
+				border-radius: 0
+				div:nth-of-type(1)
+					flex: 2
+					max-width: 270px
+				.order-wrap
+					flex: 1
+					max-width: 140px
+					flex-direction: column
+					padding: 5px 0
+					.marker
+						width: 16px
+						height: 16px
+						position: relative
+						top: -2px
+					a, p
+						opacity: 1!important
+						position: static
+						display: block
+					.product__price
+						font-size: 22px
+						font-weight: 600
+					a
+						margin-top: 50px
+						max-width: 130px
+						img
+							width: 14px
+			&__characteristics
+				padding-right: 3px
+				p
+					font-size: 14px
+					color: #000
+					line-height: 23px
+			&__img
+				flex: 1
+				background-color: #fff
+				border: none
+				box-shadow: none
+				border-right: 1px solid #e6e6e6
+				border-radius: 0
+
+@media screen and (min-width: 992px) and (max-width: 1199px)
+	.elements-sorting 
+		height: 12px
+		line-height: 12px
+		margin-bottom: 27px
+		.variant
+			padding-left: 6px
+			padding-top: 0px
+			span
+				font-size: 11px
+			a
+				font-size: 11px
+				margin-left: 23px
+		.view-sort
+			padding-right: 3px
+			padding-top: 2px
+			&__tile
+				margin-left: 17px
+				font-size: 11px
+				&:after
+					width: 14px
+					height: 14px
+					margin-left: 8px
+			&__list
+				font-size: 11px
+				&:after
+					width: 14px
+					height: 14px
+					margin-left: 8px
+
+	.product-list
+		.product
+			display: flex
+			border-radius: 3px
+			margin-bottom: 15px
+			&__description
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				box-shadow: none
+				flex: 2
+				border-radius: 0
+				padding: 13px 18px
+				div:nth-of-type(1)
+					flex: 2
+					max-width: 230px
+					padding-top: 5px
+					margin-bottom: 0				
+				.product__characteristics
+					padding-right: 3px
+					padding-top: 14px!important
+					p
+						font-size: 11px
+						color: #000
+						line-height: 19px
+				.product__status
+					width: 100%
+				.order-wrap
+					flex: 1
+					max-width: 116px
+					flex-direction: column
+					padding: 9px 0 0
+					.product__status
+						line-height: 12px
+					.marker
+						width: 13px
+						height: 13px
+						position: relative
+						top: -2px
+						margin-right: 3px
+
+					a, p
+						opacity: 1!important
+						position: static
+						display: block
+						text-align: left
+					.product__price
+						font-size: 18px
+						font-weight: 600
+						margin-bottom: 3px
+						width: 100%
+					a
+						margin-top: 42px
+						max-width: 106px
+						text-align: center
+						font-size: 11px
+						line-height: 32px
+						img
+							width: 12px
+			&__img
+				flex: 1
+				background-color: #fff
+				border: none
+				box-shadow: none
+				border-right: 1px solid #e6e6e6
+				border-radius: 0
+				img
+					max-height: 90%
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+	.elements-sorting 
+		height: 10px
+		line-height: 10px
+		margin-bottom: 20px
+		.variant
+			padding-left: 5px
+			padding-top: 0px
+			span
+				font-size: 9px
+			a
+				font-size: 9px
+				margin-left: 12px
+		.view-sort
+			padding-right: 5px
+			padding-top: 3px
+			&__tile
+				margin-left: 10px
+				font-size: 9px
+				&:after
+					width: 10px
+					height: 10px
+					margin-left: 6px
+			&__list
+				font-size: 9px
+				&:after
+					width: 10px
+					height: 10px
+					margin-left: 6px
+
+	.product-list
+		.product
+			display: flex
+			border-radius: 3px
+			margin-bottom: 9px
+			&__description
+				display: flex
+				justify-content: space-between
+				align-items: flex-start
+				box-shadow: none
+				flex: 2
+				border-radius: 0
+				padding: 13px 18px
+				div:nth-of-type(1)
+					flex: 2
+					max-width: 185px
+					padding-top: 5px
+					margin-bottom: 0
+				.product__status
+					width: 100%
+				.order-wrap
+					flex: 1
+					max-width: 92px
+					flex-direction: column
+					padding: 3px 0
+					.product__status
+						line-height: 12px
+					.marker
+						width: 10px
+						height: 10px
+						position: relative
+						top: -2px
+
+					a, p
+						opacity: 1!important
+						position: static
+						display: block
+						text-align: left
+					.product__price
+						font-size: 14px
+						font-weight: 600
+						margin-bottom: 1px
+						width: 100%
+					a
+						margin-top: 32px
+						max-width: 84px
+						text-align: center
+						font-size: 8px
+						line-height: 24px
+						img
+							width: 10px
+			&__characteristics
+				padding-right: 3px
+				p
+					font-size: 9px
+					color: #000
+					line-height: 16px
+			&__img
+				flex: 1
+				background-color: #fff
+				border: none
+				box-shadow: none
+				border-right: 1px solid #e6e6e6
+				border-radius: 0
+				img
+					max-height: 90%
 
 @media screen and (max-width: 767px)
+	.product-list
+		.product__img
+			background-color: #fff
+			border-width: 0 0 1px 0
+
 	.header
 		padding-top: 21px
 		position: relative
@@ -4605,6 +5044,33 @@ a
 		&-wrap
 			padding-left: 0
 			padding-right: 0
+	.elements-sorting
+		display: none
+	.table-list
+		&>div
+			display: flex
+			flex-wrap: wrap
+			overflow: hidden
+			padding-bottom: 10px
+		&__item
+			height: auto
+			&>div
+				display: block
+		&__head
+			display: none!important
+		&>div
+			line-height: 30px
+			text-align: center
+			&>div:first-of-type
+				max-width: 100%
+		&__name
+			a
+				display: block
+				text-align: center
+				line-height: 30px
+	.table-list 
+		.table-list__item:nth-of-type(1)
+			border-top: 0
 
 
 @media screen and (max-width: 359px)
