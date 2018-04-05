@@ -119,6 +119,7 @@ $('.close-input').click(function () {
 			$(".search input").val('');
 			$(".search input").attr("placeholder", "Поиск по каталогу");
 			$(".curtain").slideUp(300);
+			$("body").removeClass("open-curtain");
 });
 $('.read-more').click(function () {
 		$(this).prev(".features").toggleClass("open");
@@ -133,6 +134,7 @@ $(".search input" ).focus(function() {
 	$(this).attr("placeholder", "Начните вводить название товара или услуги...");
 	if ($(window).width() > '767'){
 		$(".curtain").slideDown(300);
+		$("body").addClass("open-curtain");
 	}
 });
 
@@ -179,6 +181,7 @@ $(document).mouseup(function (e){ // событие клика по веб-до�
 		$(".search").removeClass('opened');
 		$(".search input").attr("placeholder", "Поиск по каталогу");
 		$(".curtain").slideUp(300);
+		$("body").removeClass("open-curtain");
 	}
 });
 
